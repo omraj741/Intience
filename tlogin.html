@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Login With</title>
+  <title>Teacher Login</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
@@ -58,8 +58,8 @@
 	box-sizing: border-box;
   }
   .box-form .left .overlay h1 {
-	color: #000;
-	font-size: 7vmax;
+	color: black;
+	font-size: 8.8vmax;
 	line-height: 1;
 	font-weight: 750;
 	margin-top: 40px;
@@ -102,7 +102,6 @@
 	display: inline-block;
 	box-shadow: 0 3px 6px 1px #042d4657;
   }
-
   .box-form .left .overlay span a:last-child {
 	background: #000000;
 	margin-left: 0px;
@@ -117,7 +116,7 @@
 	}
   }
   .box-form .right h5 {
-	font-size:3.5vmax;
+	font-size: 3vmax;
 	line-height: 0;
   }
   .box-form .right p {
@@ -125,60 +124,8 @@
 	color: #B0B3B9;
   }
   .box-form .right .inputs {
-    text-align: center; /* Ensure the parent is centered */
-}
-
-.box-form .right .inputs .button-50 {
-    appearance: button;
-  background-color: #1AB79D;
-  background-image: none;
-  border: 1px solid #1AB79D;
-  border-radius: 4px;
-  box-shadow: #fff 4px 4px 0 0,#1AB79D 4px 4px 0 1px;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  margin: 0 5px 10px 0;
-  overflow: visible;
-  padding: 12px 40px;
-  text-align: center;
-  text-transform: none;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-.box-form .right .inputs .button-50:focus {
-	text-decoration: none;
+	overflow: hidden;
   }
-  
-.box-form .right .inputs .button-50:hover {
-	text-decoration: none;
-  }
-  
-.box-form .right .inputs .button-50:active {
-	box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
-	outline: 0;
-  }
-  
-.box-form .right .inputs .button-50:not([disabled]):active {
-	box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
-	transform: translate(2px, 2px);
-  }
-  
-@media (min-width: 768px) {
-	.box-form .right .inputs .button-50 {
-	  padding: 12px 50px;
-	}
-  }
-
-
   .box-form .right input {
 	width: 100%;
 	padding: 10px;
@@ -198,6 +145,18 @@
 	margin-right: 7px;
 	width: auto;
   }
+  .box-form .right button {
+	float: right;
+	color: #ffffff;
+	font-size: 16px;
+	padding: 12px 35px;
+	border-radius: 50px;
+	display: inline-block;
+	border: 0;
+	outline: 0;
+	box-shadow: 0px 4px 20px 0px #02fcca;
+	background-image: linear-gradient(135deg, #02fcca 10%, #1AB79D 100%);
+  }
   
   label {
 	display: block;
@@ -210,7 +169,7 @@
 	position: absolute;
 	font-family: FontAwesome;
 	background: transparent;
-	border: 3px solid #70F570;
+	border: 3px solid #1AB79D;
 	border-radius: 4px;
 	color: transparent;
 	left: -30px;
@@ -222,11 +181,11 @@
 	content: ' \f00c';
 	color: #fff;
 	cursor: pointer;
-	background: #70F570;
+	background: #1AB79D;
   }
   
   label:hover::before .text-checkbox {
-	background: #70F570;
+	background: #1AB79D;
   }
   
   label span.text-checkbox {
@@ -248,10 +207,11 @@
 	<div class="left">
 		<div class="overlay">
 		<h1>Welcome to Intience...</h1>
+		<p></p>
 		<span class="span">
 			<a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 			<a class="twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-			<a class="linkedin" href="https://www.linkedin.com/company/intience-interns/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+			<a class="linkedin" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 			<a class="instagram" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 			
 		</span>
@@ -260,15 +220,27 @@
 	
 	
 		<div class="right">
-		<h5>Login With</h5>
-		<p>Don't have an account? <a href="SingIn.html">Creat Your Account</a> it takes less than a minute</p>
+		<h5>Teacher Login</h5>
+		<p>Don't have an account? <a href="SingUp.html">Creat Your Account</a> it takes less than a minute</p>
 		<div class="inputs">
-			<button class="button-50" role="button"><a href="slogin.html">Student</a></button>
+			<input type="text" placeholder="username">
 			<br>
-			<br>
-			<button class="button-50" role="button"><a href="tlogin.html">Teacher</a></button>
+			<input type="password" placeholder="password">
 		</div>
-
+			
+			<br><br>
+			
+		<div class="remember-me--forget-password">
+				<!-- Angular -->
+	<label>
+		<input type="checkbox" name="item" checked/>
+		<span class="text-checkbox">Remember me</span>
+	</label>
+			<p><a href="#">forget password?</a></p>
+		</div>
+			
+			<br>
+			<button><a href="i.html">LogIn</a></button>
 	</div>
 	
 </div>
